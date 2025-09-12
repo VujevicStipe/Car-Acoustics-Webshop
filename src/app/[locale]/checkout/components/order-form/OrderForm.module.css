@@ -1,0 +1,91 @@
+.orderForm {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+    min-width: 280px;
+}
+
+.capitalise {
+    text-transform: capitalize;
+}
+
+.label,
+.checkboxLabel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkboxLabel {
+    margin: 20px 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin: 20px 0;
+}
+
+.radioModern {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.radioModern input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #999;
+  display: inline-block;
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.radioModern input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #ff6f00; /* boja ispune */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease;
+}
+
+.radioModern input[type="radio"]:checked {
+  border-color: #ff6f00;
+}
+
+.radioModern input[type="radio"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.labelText {
+  user-select: none;
+}
+
+@media screen and (max-width: 450px) {
+    .label {
+        flex-direction: column;
+        text-align: start;
+        gap: 3px;
+    }
+    .input {
+        min-width: 100%;
+    }
+}

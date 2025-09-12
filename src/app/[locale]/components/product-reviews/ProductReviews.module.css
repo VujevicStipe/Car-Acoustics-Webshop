@@ -1,0 +1,100 @@
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.reviewCard {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 20px 24px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: start;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 2px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: var(--orange);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 8px;
+  user-select: none;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.date {
+  font-size: 13px;
+  color: #888;
+}
+
+.rating {
+  margin-bottom: 2px;
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 20px;
+  color: #eaeaea;
+  user-select: none;
+}
+
+.starFilled {
+  color: #fdb813;
+}
+
+.comment {
+  font-size: 15px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.deleteBtn {
+  margin-left: auto;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  opacity: 1;
+}
+
+.deleteBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.noReviews {
+  text-align: center;
+  color: #888;
+  font-size: 16px;
+  padding: 30px 0 10px 0;
+}

@@ -1,0 +1,45 @@
+.overviewContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 10vh;
+}
+
+.widgetCard {
+  min-width: 260px;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.widgetTitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.widgetList {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.widgetList li, .widgetList ol {
+  margin-bottom: 0.5em;
+}
+
+.widgetLink {
+  color: #1240c6;
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+.widgetLink:hover {
+  color: #0e2f91;
+}

@@ -1,0 +1,141 @@
+.userInfo {
+    width: 100%;
+    max-width: 1024px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.userInfo.mobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.userInfoMobile {
+    width: 100%;
+}
+
+.userInfoDesktop {
+    width: 100%;
+}
+
+/* .userInfo.mobile > * {
+    width: 100%;
+} */
+
+.userInfo .title {
+    width: 100%;
+    text-align: start;    
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+}
+
+.userAvatar {
+    width: 25%;
+    min-width: 90px;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.userInfo .userImg {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.content {
+    width: 70%;
+    min-width: 270px;
+    height: 100%;
+    padding: 14px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.userInfo.mobile .content {
+    width: 100%;
+}
+
+.username {
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.generalInfoTitle {
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.generalInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.userInfo.mobile .generalInfo {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.userGenerals {
+  position: relative;
+  /* border: 1px solid #e0e0e0; */
+  border-radius: 8px;
+  padding: 22px 4.4rem 14px 8px;
+  display: inline-block; 
+  background-color: #fff;
+}
+
+.label {
+  position: absolute;
+  top: 7px;  
+  left: 1px;
+  background-color: #fff; 
+  padding: 0 0.4rem;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.emailField {
+  display: block;
+  font-weight: 500;
+  color: #111;
+}
+
+.changePassword {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: start;
+}
+
+/* .userInfo.desktop .userImg {
+    width: 30%;
+} */

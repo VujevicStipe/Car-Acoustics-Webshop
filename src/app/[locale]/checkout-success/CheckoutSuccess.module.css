@@ -1,0 +1,29 @@
+.success {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 5rem 2.5rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragraph {
+    padding: 0 0 2rem 0;
+    font-size: 2rem;
+    color: black;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}

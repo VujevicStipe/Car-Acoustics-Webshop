@@ -1,0 +1,97 @@
+.filterStyle {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #333;
+  width: 90%;
+}
+
+.filterStyle.mobile,
+.filterStyle.tablet {
+  width: 100%;
+}
+
+.accordionButton {
+  padding: 0.75rem 1rem;
+  background-color: #4f46e5;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.accordionContent {
+  margin-top: 1rem;
+  display: none;
+}
+
+.accordionContent.open {
+  display: block;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: start;
+  padding: 10px;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #222;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  user-select: none;
+  position: relative;
+}
+
+.checkboxWrapper input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #777;
+  border-radius: 4px;
+  transition: background-color 0.2s, border-color 0.2s;
+  position: relative;
+}
+
+.checkboxWrapper input[type="checkbox"]:checked {
+  background-color: #4f46e5;
+  border-color: #4f46e5;
+}
+
+.checkboxWrapper input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.select {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}

@@ -1,0 +1,99 @@
+.container {
+    height: 100vh;
+    position: relative;
+    min-height: 550px;
+    z-index: 0;
+}
+
+.container .bgTexture {
+    position: absolute; 
+    bottom: -1px;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.container .bgTexture svg {
+    width: 100%;  
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .content {
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    position: relative;
+    bottom: -4px;
+}
+
+.container .content .title {
+    position: absolute;
+    top: 25%;
+    left: 3.6%;
+    text-align: left;
+    z-index: 2;
+}
+
+.container .content .title h1 {
+    text-transform: uppercase;
+}
+
+.container .heroImg1 {
+    width: 80%;
+    max-width: 710px;
+    min-width: 300px;
+    height: fit-content;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.container .heroImg2 {
+    width: 52%;
+    height: fit-content;
+    max-width: 735px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    object-fit: cover;
+}
+
+.container .heroImg1 img,
+.container .heroimg2 img {
+    width: 100%;
+    height: 100%;
+}
+
+.container.mobile .title {
+    font-size: calc(0.7rem + 1.43vh);
+    top: 21%;
+    left: 0;
+    padding: 0 15px;
+}
+
+.container.mobile .heroImg1 {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.container.mobile .heroImg2 {
+    width: 57%;
+    bottom: -1%;
+    max-height: 540px;
+}
+
+.container.mobile .bgTexture,
+.container.tablet .bgTexture {
+    height: 100%;
+    width: 120%;
+}
+
+.container.tablet,
+.container.mobile {
+    height: 94vh;
+}

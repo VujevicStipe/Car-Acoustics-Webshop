@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--orange);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 5vh;
+}
+
+.nav > *:not(:last-child) {
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav > *:hover {
+  background-color: white;
+}
+
+.nav > *:last-child {
+  margin-top: 18px;
+}
+
+.active {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}

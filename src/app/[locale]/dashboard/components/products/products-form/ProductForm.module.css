@@ -1,0 +1,23 @@
+.addProductForm {
+    max-width: 1440px;
+    margin-top: 10vh;
+}
+
+.horizontalForm {
+    max-width: 1440px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    max-width: 100%;
+}
+
+.title {
+    width: 100%;
+}
+
+.horizontalForm textArea {
+    flex: 1 1 300px;
+    min-width: 300px;
+    box-sizing: border-box;
+}

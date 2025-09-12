@@ -1,0 +1,47 @@
+.orderInfo {
+    width: 100%;
+    height: fit-content;
+    padding: 30px 20px;
+    margin-bottom: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: start;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+.details {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.line {
+    margin-top: 10px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--orange);
+}
+
+.totalSection {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin-bottom: 1.7rem;
+}
+
+.totalDetails {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}

@@ -1,0 +1,103 @@
+.ctaSection {
+    min-width: 100%;
+    height: fit-content;
+    position: relative;
+}
+
+.ctaSection .content {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 350px;
+    height: fit-content;
+    max-height: 100%;
+    padding: 45px 70px 30px 70px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    background-color: var(--black-box);
+    border-radius: 30px;
+    color: white;
+}
+
+.ctaSection .content .line {
+    width: 40%;
+    height: 1px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 20px 0 40px 0;
+}
+
+.ctaSection .content .text {
+    height: 100%;
+    width: 55%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: start;
+}
+
+.ctaSection .paragraph {
+    max-width: 450px;
+}
+
+.ctaSection .content .text > *:last-child {
+    margin-top: 30px;
+}
+
+.ctaSection .content .image {
+    width: 35%;
+}
+
+.ctaSection .content .image img {
+    height: 100%;
+    width: 100%;
+}
+
+.ctaSection .bgTexture {
+    width: 100%;
+    height: 100%;
+    background-color: var(--orange);
+    position: absolute;
+    z-index: -1;
+}
+
+.ctaSection.tablet .content,
+.ctaSection.mobile .content {
+    margin: 0 15px;
+}
+
+.ctaSection.tablet .content,
+.ctaSection.mobile .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 30px 30px 30px;
+}
+.ctaSection.tablet .content .text,
+.ctaSection.mobile .content .text {
+    width: 100%;
+}
+.ctaSection.mobile .content .text h2 {
+    font-size: 1.8rem;
+}
+
+.ctaSection.mobile .content .line {
+    margin: 15px 0 30px 0;
+}
+
+.ctaSection.tablet .content .image {
+    width: 60%;
+    align-self: flex-end;
+}
+
+
+.ctaSection.mobile .content .image {
+    width: 100%;
+    align-self: center;
+    max-width: 500px;
+}

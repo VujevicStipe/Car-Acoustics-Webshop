@@ -1,0 +1,33 @@
+.authentication_modal {
+    padding: 32px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 700px;
+    background-color: white;
+    
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .authentication_modal .authentication_header {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .authentication_modal .close_button {
+    margin-bottom: 24px;
+    align-self: auto;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  
+  .authentication_modal h2 {
+    position: relative;
+    margin-bottom: 24px;
+    color: black !important;
+    font-weight: 600;
+  }
+  

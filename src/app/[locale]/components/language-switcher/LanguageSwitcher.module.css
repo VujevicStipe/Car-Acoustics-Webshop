@@ -1,0 +1,32 @@
+.switchWrapper {
+  position: relative;
+  width: 90px;
+  height: 44px;
+  background-color: #f1f1f1;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+  top: 4px;
+  width: 44px;
+  height: 36px;
+  background-color: white;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.flags {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

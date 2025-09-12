@@ -1,0 +1,148 @@
+.navBar {
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  min-height: 100px;
+  padding: 10px 30px 0 30px;
+  display: flex;
+  z-index: 1000;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: inherit;
+}
+
+/* .fixed {
+  position: fixed;
+  z-index: 1300;
+} */
+
+/* .navBar.mobile,
+.navBar.tablet {
+  width: auto;
+  margin: 0 auto;
+  padding: 10px;
+  margin: 0 15px;
+} */
+
+.logo {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+.navLinks,
+.authLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.authLinks {
+  justify-content: flex-start;
+}
+
+.navBar.dekstop .authLinks {
+  justify-content: flex-end;
+}
+
+.navLinks li,
+.authLinks li {
+  list-style: none;
+}
+
+.burgerMenu {
+  cursor: pointer;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 40px;
+  height: 40px;
+  z-index: 1300;
+}
+
+.closeButton {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1300;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+
+  opacity: 0;
+  transform: translateY(-20px);
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-name: fadeSlideDown;
+}
+
+.mobileMenu.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobileMenu a:hover {
+  color: #ff6600;
+  transform: scale(1.05);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mobileMenu ul {
+  padding: 10vh 0;
+  margin: 0;
+  list-style: none;
+  text-align: start;
+}
+
+.mobileMenu li:not(:last-child) {
+  margin-bottom: 2.5rem;
+  font-size: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem; 
+}
+
+.mobileMenu li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc; 
+}
+
+.mobileMenu a {
+  text-decoration: none;
+  color: inherit;
+}

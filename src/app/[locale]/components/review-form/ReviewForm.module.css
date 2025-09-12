@@ -1,0 +1,83 @@
+.form {
+  width: 100%;
+  max-width: 550px;
+  max-height: fit-content;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  background: #fff;
+  padding: 24px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 32px;
+}
+
+.ratingRow {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  color: #eaeaea;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.starFilled {
+  color: #fdb813;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.textarea {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+  margin-top: 4px;
+  background: #fafbfc;
+}
+
+.error {
+  color: #e74c3c;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: 0 1px 3px rgba(25, 118, 210, 0.08);
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

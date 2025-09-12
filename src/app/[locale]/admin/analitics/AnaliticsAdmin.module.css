@@ -1,0 +1,24 @@
+.analiticsAdmin {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.title {
+    margin-bottom: 5vh;
+}
+
+.sectionTitle {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.topProductsWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.lastTitle {
+    margin-top: 5vh;
+}
