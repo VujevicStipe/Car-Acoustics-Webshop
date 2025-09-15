@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
-import { NextMiddleware, NextFetchEvent } from "next/server";
+import type { NextFetchEvent, NextRequest } from "next/server";
+import { NextMiddleware } from "next/server";
 import createMiddleware from "next-intl/middleware";
 import { jwtVerify } from "jose";
 
@@ -35,11 +35,16 @@ function withExtraMiddleware(next: NextMiddleware) {
     const token = request.cookies.get(cookieName)?.value;
     const locale = getLocaleFromPath(url.pathname);
     const homePath = locale === "en" ? "/" : `/${locale}`;
-    const secret = process.env.NEXT_PUBLIC_JWT_SECRET_KEY;
-    if (!secret) throw new Error("Missing JWT secret");
+    const secret = process.env.JWT_SECRET_KEY;
 
-    // Existing admin protection
-    const adminRegex = new RegExp(`^\/(?:${locales.join("|")})?\/?admin(\/|$)`);
+    if (!secret) {
+      // fallback, ne baca error da middleware ne padne
+      console.warn("JWT secret nije postavljen");
+      return next(request, event);
+    }
+
+    // Admin protection
+    const adminRegex = new RegExp(`^/(?:${locales.join("|")})?/admin(/|$)`);
     if (adminRegex.test(url.pathname)) {
       if (!token) {
         url.pathname = homePath;
@@ -60,8 +65,9 @@ function withExtraMiddleware(next: NextMiddleware) {
       }
     }
 
+    // Checkout protection
     const checkoutRegex = new RegExp(
-      `^\/(?:${locales.join("|")})?\/?checkout(\/|$)`
+      `^/(?:${locales.join("|")})?/checkout(/|$)`
     );
     if (checkoutRegex.test(url.pathname)) {
       if (!token) {
@@ -76,8 +82,9 @@ function withExtraMiddleware(next: NextMiddleware) {
       }
     }
 
+    // Change-password protection
     const changePasswordRegex = new RegExp(
-      `^\/(?:${locales.join("|")})?\/?change-password(\/|$)`
+      `^/(?:${locales.join("|")})?/change-password(/|$)`
     );
     if (changePasswordRegex.test(url.pathname)) {
       if (!token) {
